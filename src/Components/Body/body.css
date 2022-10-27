@@ -1,0 +1,107 @@
+body {
+    background-color: #1a76fd;
+}
+
+button {
+    width: 80px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+}
+
+.selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#priority {
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    margin: 5px 10px;
+    outline: 1px solid #1a76fd;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid white;
+    border-radius: 12px;
+    min-width: 70%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 5px;
+}
+
+.titleSearch {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 6%;
+}
+
+.titleSearch .searchDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.searchDiv input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #1a76fd;
+    border-radius: 10px;
+    outline-color: #1a76fd;
+}
+
+.contentSection {
+    flex: 20;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    gap: 10px;
+}
+
+.leftNav {
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    padding: 3% 1%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-right: 2px solid #efefef;
+}
+
+.leftNav a:hover {
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #1a76fd;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.contentDisplay {
+    border: 1px solid tomato;
+    flex: 3;
+}
