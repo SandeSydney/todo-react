@@ -9,10 +9,10 @@ export default function Body() {
             <div className='container'>
                 <div className='content'>
                     <div className='titleSearch'>
-                        <h1>Todo App</h1>
+                        <h1>React Todo App</h1>
                         <div className='searchDiv'>
                             <input type="text" placeholder='Type to Search' />
-                            <button>Search</button>
+                            <button id='searchBtn'>Search</button>
                         </div>
                     </div>
                     <hr />
