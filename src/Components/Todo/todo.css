@@ -1,0 +1,27 @@
+.completeBtn{
+    background-color: #008000;
+}
+
+.incompleteBtn{
+    background-color: #E32227;
+}
+
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 15px;
+}
+
+.todoItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
