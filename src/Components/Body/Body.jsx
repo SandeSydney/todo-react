@@ -17,7 +17,7 @@ export default function Body() {
                     </div>
                     <hr />
                     <div className='contentSection'>
-                        <div className='leftNav'>
+                        {/* <div className='leftNav'>
                             <a>Add Todo</a>
                             <a>Incomplete Todos</a>
                             <a>Completed Todos</a>
@@ -29,7 +29,7 @@ export default function Body() {
                                     <option value="low">Low</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='contentDisplay'>
                             <TodoList />
                         </div>
