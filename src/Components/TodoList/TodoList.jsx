@@ -3,7 +3,7 @@ import Todo from '../Todo/Todo'
 import TodoForm from '../TodoForm/TodoForm'
 
 function TodoList() {
-    const [todos, setTodos] = useState([{id:2, title:'Todo', complete : false}])
+    const [todos, setTodos] = useState([])
 
     // function to add a todo
     const addTodo = (todo) => {
@@ -16,10 +16,27 @@ function TodoList() {
         setTodos(newTodos)
     }
 
+    // Function to update todo
+    const updateTodo = (todoId, newVal) => {
+        // ensure todo is not empty on submission
+        if (!newVal.title || /^\s*$/.test(newVal.title)) {
+            return
+        }
+
+        setTodos(pre => pre.map(itm => itm.id === todoId ? newVal : itm))
+    }
+
+    // function to delete todos
+    const removeTodo = id => {
+        const removeArry = [...todos].filter(todo => todo.id !== id)
+
+        setTodos(removeArry)
+    }
+
     // toggling a complete todo status
-    const completeTodo = (id)=>{
-        let updatedTodos = todos.map(todo=>{
-            if(todo.id === id){
+    const completeTodo = (id) => {
+        let updatedTodos = todos.map(todo => {
+            if (todo.id === id) {
                 todo.complete = !todo.complete
             }
             return todo
@@ -32,7 +49,7 @@ function TodoList() {
         <div>
             <h3>Anything to do?</h3>
             <TodoForm onSubmit={addTodo} />
-            <Todo todos={todos} completeTodo={completeTodo}/>
+            <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo} />
         </div>
     )
 }

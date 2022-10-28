@@ -1,0 +1,46 @@
+.completeBtn{
+    background-color: #008000;
+}
+
+.incompleteBtn{
+    background-color: #E32227;
+}
+
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 15px;
+}
+
+.todoItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titleDiv{
+    width: 200px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: larger;
+    
+}
+
+.completeRow{
+    background-color: lightgrey;
+    border-radius: 8px;
+    border-style: none;
+    padding: 3px 1px;
+}
+

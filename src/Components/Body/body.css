@@ -3,14 +3,20 @@ body {
 }
 
 button {
-    width: 80px;
+    width: 150px;
     padding: 8px;
     border-radius: 8px;
+    border-style: none;
     cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 hr {
-    width: 90%;
+    width: 70%;
+    height: 1px;
+    background-color: #E32227;
+    border: none;
 }
 
 .selector {
@@ -18,6 +24,11 @@ hr {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+#searchBtn{
+    background-color: #0070E0;
+    color: #ffffff;
 }
 
 #priority {
@@ -43,7 +54,7 @@ hr {
     border: 1px solid white;
     border-radius: 12px;
     min-width: 70%;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -66,8 +77,7 @@ hr {
     gap: 20px;
 }
 
-.searchDiv input {
-    width: 250px;
+input { 
     padding: 8px;
     border: 1px solid #1a76fd;
     border-radius: 10px;
@@ -75,7 +85,7 @@ hr {
 }
 
 .contentSection {
-    flex: 20;
+    flex: 10;
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
@@ -84,13 +94,14 @@ hr {
 
 .leftNav {
     box-sizing: border-box;
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     padding: 3% 1%;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    border-right: 2px solid #efefef;
+    border: 1px solid #efefef;
+    border-radius: 12px;
 }
 
 .leftNav a:hover {
@@ -102,6 +113,13 @@ hr {
 }
 
 .contentDisplay {
-    border: 1px solid tomato;
-    flex: 3;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    flex: 1;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 60vh;
 }
