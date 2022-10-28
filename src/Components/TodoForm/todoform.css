@@ -19,3 +19,8 @@
     color: antiquewhite;
     background-color: green;
 }
+
+.todo-form #editTodo{
+    color: antiquewhite;
+    background-color: #0070E0;
+}
