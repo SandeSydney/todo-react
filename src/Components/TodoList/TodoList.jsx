@@ -16,11 +16,18 @@ function TodoList() {
         setTodos(newTodos)
     }
 
+    // function to delete todos
+    const removeTodo = id => {
+        const removeArry = [...todos].filter(todo=>todo.id !== id)
+
+        setTodos(removeArry)
+    }
+
     // toggling a complete todo status
-    const completeTodo = (id)=>{
-        let updatedTodos = todos.map(todo=>{
-            if(todo.id === id){
-                todo.isComplete = !todo.inComplete
+    const completeTodo = (id) => {
+        let updatedTodos = todos.map(todo => {
+            if (todo.id === id) {
+                todo.complete = !todo.complete
             }
             return todo
         })
@@ -32,7 +39,7 @@ function TodoList() {
         <div>
             <h3>Anything to do?</h3>
             <TodoForm onSubmit={addTodo} />
-            <Todo todos={todos} completeTodo={completeTodo}/>
+            <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} />
         </div>
     )
 }
