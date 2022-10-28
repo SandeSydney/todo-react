@@ -13,7 +13,7 @@ function TodoItem({ todo,completeTodo,removeTodo }) {
             <div>
                 <button className={todo.complete ? 'completeBtn' : 'incompleteBtn'} onClick={() => completeTodo(todo.id)}>{todo.complete ? "Mark Undone" : "Mark Done"}</button>
             </div>
-            <div>
+            <div className='titleDiv'>
                 {todo.title}
             </div>
             <div>
