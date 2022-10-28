@@ -4,17 +4,17 @@ import { GrEdit } from 'react-icons/gr'
 import TodoForm from '../TodoForm/TodoForm'
 import './todo.css'
 
-function Todo({ todos, completeTodo, removeTodo,updateTodo }) {
+function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     const [edit, setEdit] = useState({
         id: null,
-        val: ''
+        value: ''
     })
 
-    const submitEdit = val => {
-        updateTodo(edit.id, val)
+    const submitEdit = value => {
+        updateTodo(edit.id, value)
         setEdit({
             id: null,
-            val: ''
+            value: ''
         })
     }
 
@@ -27,19 +27,21 @@ function Todo({ todos, completeTodo, removeTodo,updateTodo }) {
     return (
         <div className='todoContainer'>
             {todos.map((todo) => (
-                <div className='todoItem' key={todo.index} >
-                    <div>
-                        <button className={todo.complete ? 'completeBtn' : 'incompleteBtn'} onClick={() => completeTodo(todo.id)}>{todo.complete ? "Mark Undone" : "Mark Done"}</button>
-                    </div>
-                    <div className='titleDiv'>
-                        {todo.title}
-                    </div>
-                    <div>
-                        {todo.priority}
-                    </div>
-                    <div className='icons'>
-                        <MdDeleteOutline onClick={() => removeTodo(todo.id)} />
-                        <GrEdit onClick={() => setEdit({ id: todo.id, title: todo.title, priority: todo.priority })} />
+                <div className={todo.complete?'completeRow':''}>
+                    <div className='todoItem' key={todo.index} >
+                        <div>
+                            <button className={todo.complete ? 'completeBtn' : 'incompleteBtn'} onClick={() => completeTodo(todo.id)}>{todo.complete ? "Mark Undone" : "Mark Done"}</button>
+                        </div>
+                        <div className='titleDiv'>
+                            {todo.title}
+                        </div>
+                        <div>
+                            {todo.priority}
+                        </div>
+                        <div className='icons'>
+                            <MdDeleteOutline onClick={() => removeTodo(todo.id)} />
+                            <GrEdit onClick={() => setEdit({ id: todo.id, title: todo.title, priority: todo.priority })} />
+                        </div>
                     </div>
                 </div>
             ))
