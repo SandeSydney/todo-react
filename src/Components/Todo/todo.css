@@ -33,4 +33,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    font-size: larger;
+    
 }
+
+.completeRow{
+    background-color: lightgrey;
+    border-radius: 8px;
+    border-style: none;
+    padding: 3px 1px;
+}
+
