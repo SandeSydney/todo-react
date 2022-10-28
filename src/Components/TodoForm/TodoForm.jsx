@@ -17,7 +17,8 @@ function TodoForm(props) {
         props.onSubmit({
             id: uuidv4(),
             title: input,
-            priority: priorityRef.current.value
+            priority: priorityRef.current.value,
+            complete:false
         })
 
         setInput('')
